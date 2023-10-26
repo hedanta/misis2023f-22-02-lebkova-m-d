@@ -5,7 +5,7 @@ int main() {
   int tests;
   std::cin >> tests;
 
-  while (tests--) {
+  for (int t = 0; t < tests; t += 1) {
     long long arr_size;
     std::cin >> arr_size;
     std::vector<int> arr(arr_size, 0);

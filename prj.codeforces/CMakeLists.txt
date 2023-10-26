@@ -5,3 +5,5 @@ add_executable(0580c 0580c.cpp)
 add_executable(1343c 1343c.cpp)
 
 add_executable(1420b 1420b.cpp)
+
+add_executable(1385c 1385c.cpp)
