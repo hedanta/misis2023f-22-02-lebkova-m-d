@@ -1,3 +1,10 @@
+out/
+.vs/
+bin.dbg/
+bin.rel/
+bin.relwithdbg/
+build/
+
 # Prerequisites
 *.d
 
