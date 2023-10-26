@@ -23,9 +23,9 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(noi_est ${OpenCV_LIBS})
 
-
-install(TARGETS noi_est DESTINATION bin)
 install(FILES prj.cw/cat.jpg DESTINATION bin)
+install(TARGETS noi_est DESTINATION bin)
+
    
 install(DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE}/
         DESTINATION bin/codeforces/
