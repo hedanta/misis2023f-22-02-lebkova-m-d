@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.21)
 
 project(misis2023f-22-02-lebkova-m-d)
 
+#set(CMAKE_TOOLCHAIN_FILE "C:/work/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
 set(CMAKE_VERBOSE_MAKEFILE True)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True) 
@@ -15,15 +17,30 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "cmake")
 
 add_subdirectory(prj.codeforces)
+add_subdirectory(prj.cw)
 
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+target_link_libraries(noi_est ${OpenCV_LIBS})
+
+
+install(TARGETS noi_est DESTINATION bin)
+install(FILES prj.cw/cat.jpg DESTINATION bin)
+   
 install(DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE}/
-        DESTINATION ./
+        DESTINATION bin/codeforces/
         FILES_MATCHING 
         PATTERN "*.exe")
 
-#install(TARGETS 0368b 0580c 0723b 1343c DESTINATION .)
+install(DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE}/
+        DESTINATION bin/
+        FILES_MATCHING 
+        PATTERN "*.dll"
+        PATTERN "*.so")
 
 add_custom_target(install_${PROJECT_NAME}
         ${CMAKE_COMMAND} -DCMAKE_INSTALL_CONFIG_NAME=${CMAKE_BUILD_TYPE}
         -P cmake_install.cmake
         )
+
+#install(TARGETS 0368b 0580c 0723b 1343c DESTINATION .)
