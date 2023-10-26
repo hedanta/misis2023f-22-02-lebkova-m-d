@@ -16,7 +16,12 @@ set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "cmake")
 
 add_subdirectory(prj.codeforces)
 
-install(TARGETS 0368b 0580c 1343c DESTINATION .)
+install(DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE}/
+        DESTINATION ./
+        FILES_MATCHING 
+        PATTERN "*.exe")
+
+#install(TARGETS 0368b 0580c 0723b 1343c DESTINATION .)
 
 add_custom_target(install_${PROJECT_NAME}
         ${CMAKE_COMMAND} -DCMAKE_INSTALL_CONFIG_NAME=${CMAKE_BUILD_TYPE}
