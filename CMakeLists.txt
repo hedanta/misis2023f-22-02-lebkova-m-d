@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.21)
 
 project(misis2023f-22-02-lebkova-m-d)
 
+if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+  add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+  add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+endif()
+
 set(CMAKE_VERBOSE_MAKEFILE True)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True) 

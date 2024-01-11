@@ -20,6 +20,4 @@ add_executable(1744c 1744c.cpp)
 
 add_executable(1487b 1487b.cpp)
 
-add_executable(1369c 1369c.cpp)
-
 add_executable(1335b 1335b.cpp)
