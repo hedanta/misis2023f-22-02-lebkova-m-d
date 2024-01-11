@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 long long sum(std::string s) {
   long long res = 0;

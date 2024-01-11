@@ -6,7 +6,7 @@ int main() {
 
   for (int t = 0; t < tests; t += 1) {
     int n;
-    cin >> n;
+    std::cin >> n;
     char c;
     std::cin >> c;
     std::string s;
