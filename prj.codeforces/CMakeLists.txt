@@ -9,3 +9,9 @@ add_executable(1420b 1420b.cpp)
 add_executable(1385c 1385c.cpp)
 
 add_executable(0723b 0723b.cpp)
+
+add_executable(0102b 0102b.cpp)
+
+add_executable(1373c 1373c.cpp)
+
+add_executable(1829d 1829d.cpp)
