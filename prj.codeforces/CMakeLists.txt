@@ -12,7 +12,7 @@ add_executable(0723b 0723b.cpp)
 
 add_executable(0102b 0102b.cpp)
 
-add_executable(1373c 1373c.cpp)
+add_executable(1373a 1373a.cpp)
 
 add_executable(1829d 1829d.cpp)
 
